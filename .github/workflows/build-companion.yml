@@ -1,72 +1,76 @@
-name: Build and validate textbook companion
+name: Validate The Skill Bottleneck companion materials
 on:
   push:
     branches: [main]
     paths:
-      - scripts/build_companion.py
-      - .github/workflows/build-companion.yml
+      - 'chapters/**'
+      - 'labs/**'
+      - 'content-manifest.json'
+      - '.github/workflows/build-companion.yml'
   workflow_dispatch:
 permissions:
-  contents: write
-concurrency:
-  group: textbook-companion-generation
-  cancel-in-progress: false
+  contents: read
 jobs:
-  build:
+  verification:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: main
-          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Fetch canonical book and all recorded laboratory tests
-        run: git clone --quiet --depth 1 https://github.com/danraid/The-Skill-Bottleneck.git _book
-      - name: Generate chapter exercise and solution material
-        run: python scripts/build_companion.py
-      - name: Execute all 14 independently copied reference labs
+      - name: Confirm all textbook exercises and public answers
         run: |
           python - <<'PY'
-          import subprocess
+          import json,hashlib
           from pathlib import Path
-          for n in range(1,15):
-            path=Path('labs')/f'{n:02d}'
-            print('RUN_LAB',n,flush=True)
-            subprocess.run(['python','-m','unittest','-v','test_lab.py'],cwd=path,check=True)
+          root=Path('.')
+          manifest=json.loads(Path('content-manifest.json').read_text())
+          chapters=manifest['chapters']
+          assert len(chapters)==20 and manifest['lab_count']==14
+          total_exercises=total_questions=0
+          for c in chapters:
+              n=c['number']
+              folder=root/'chapters'/n
+              for name in ('README.md','exercises.md','answers.md'):
+                  assert (folder/name).is_file(),f'{n}:{name}'
+              e=(folder/'exercises.md').read_text()
+              a=(folder/'answers.md').read_text()
+              count=e.count('### E')
+              q=e.count('### Q')
+              assert count==c['exercises'],(n,count,c['exercises'])
+              assert q==c['questions'],(n,q,c['questions'])
+              assert a.count('### E')==count,(n,'missing exercise answers')
+              assert a.count('### Q')==q,(n,'missing review answers')
+              for lab in c['labs']:
+                  assert (root/'labs'/lab/'README.md').is_file(),(n,lab)
+              total_exercises+=count;total_questions+=q
+          assert total_exercises==manifest['total_exercises']
+          assert total_questions==manifest['total_review_questions']
+          print('CHAPTER_LINKS_AND_ANSWERS_VALID',total_exercises,total_questions)
           PY
-      - name: Validate chapter URL targets and answer coverage
+      - name: Run reference solutions and verify original execution hashes
         run: |
           python - <<'PY'
-          import json
+          import json,hashlib,subprocess
           from pathlib import Path
-          d=json.loads(Path('content-manifest.json').read_text())
-          assert len(d['chapters'])==20 and d['labs']==14
-          for chapter in d['chapters']:
-            n=chapter['chapter']
-            p=Path('chapters')/n
-            assert all((p/f).is_file() for f in ('README.md','exercises.md','answers.md'))
-            assert chapter['exercises']>=1
-            for lab in chapter['labs']:
-              assert (Path('labs')/lab/'README.md').exists()
-            assert 'Worked Answers' in (p/'answers.md').read_text()
-          assert d['exercises']>=50
-          print('LINK_TARGETS_AND_EXERCISES_OK',d['exercises'],d['review_questions'])
+          for i in range(1,15):
+              folder=Path('labs')/f'{i:02d}'
+              data=json.loads((folder/'execution.json').read_text())
+              assert data['exit_code']==0,i
+              for name,key in [('main.py','source_sha256'),('test_lab.py','test_sha256')]:
+                  assert hashlib.sha256((folder/name).read_bytes()).hexdigest()==data[key],(i,name)
+              subprocess.run(['python','-m','unittest','-v','test_lab.py'],cwd=folder,check=True)
+          print('ALL_14_COMPANION_LABS_RETESTED')
           PY
-      - name: Persist validated public companion material
+      - name: Verify canonical print links resolve to actual files
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md RUNNING.md EDITORIAL_NOTES.md content-manifest.json chapters labs
-          if ! git diff --cached --quiet; then
-            git commit -m 'education: publish 20 exercise/answer chapters and 14 tested labs'
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
-      - uses: actions/upload-artifact@v4
-        with:
-          name: textbook-companion-verification
-          path: content-manifest.json
-          retention-days: 45
+          python - <<'PY'
+          from pathlib import Path
+          for i in range(1,21):
+              n=f'{i:02d}'
+              assert (Path('chapters')/n/'README.md').is_file()
+              assert (Path('chapters')/n/'exercises.md').is_file()
+              assert (Path('chapters')/n/'answers.md').is_file()
+          print('20_CHAPTER_URL_TARGETS_PRESENT')
+          PY
