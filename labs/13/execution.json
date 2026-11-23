@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "7f844c6fb0554a7ced233ed3e4d6f0cec68cb25ddfeb0c132935f36cb61becbc",
+  "test_sha256": "54c0231c8c6dc5a243a63ef95b6a51365727403745f32a77156fee4a1535b178",
+  "test_output_tail": "test_clear (test_lab.TestProfiler.test_clear) ... ok\ntest_invalid_inputs (test_lab.TestProfiler.test_invalid_inputs) ... ok\ntest_no_records_returns_none (test_lab.TestProfiler.test_no_records_returns_none) ... ok\ntest_no_success_returns_none (test_lab.TestProfiler.test_no_success_returns_none) ... ok\ntest_per_success_cost_and_p95 (test_lab.TestProfiler.test_per_success_cost_and_p95) ... ok\ntest_record_and_totals (test_lab.TestProfiler.test_record_and_totals) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.001s\n\nOK\n",
+  "executed_at": "2026-11-23T18:10:30.873204+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}

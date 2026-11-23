@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "c99e888fb2314a5786be4d83d7d935cc4007f51af102c0443d1db7184a0bddb9",
+  "test_sha256": "8cf6853ff5ff3fa604345fa7447b55cb8cba5a18bfb6905ba402e33208cea8f9",
+  "test_output_tail": "test_not_found_errors (test_lab.TestPlatform.test_not_found_errors) ... ok\ntest_policy_enforcement_denied (test_lab.TestPlatform.test_policy_enforcement_denied) ... ok\ntest_register_and_get_agent (test_lab.TestPlatform.test_register_and_get_agent) ... ok\ntest_route_and_playbook_execution (test_lab.TestPlatform.test_route_and_playbook_execution) ... ok\ntest_tenant_isolation (test_lab.TestPlatform.test_tenant_isolation) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nOK\n",
+  "executed_at": "2026-11-23T18:11:26.917893+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}
