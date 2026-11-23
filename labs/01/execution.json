@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "94963a6add6ff4ee687ef93fde7c4a05bb266613d845d8137ab905f0aae12af2",
+  "test_sha256": "d01172c6f416c270d07453fd60c754b044351d9a16a07069eaa568ee0adbfe9d",
+  "test_output_tail": "test_empty_skills_list (test_lab.TestSelectSkill.test_empty_skills_list) ... ok\ntest_no_skill_matches (test_lab.TestSelectSkill.test_no_skill_matches) ... ok\ntest_selects_first_matching_skill (test_lab.TestSelectSkill.test_selects_first_matching_skill) ... ok\ntest_skill_with_missing_capabilities_field (test_lab.TestSelectSkill.test_skill_with_missing_capabilities_field) ... ok\ntest_skill_with_non_list_capabilities_skipped (test_lab.TestSelectSkill.test_skill_with_non_list_capabilities_skipped) ... ok\ntest_task_with_non_list_requirements_raises (test_lab.TestSelectSkill.test_task_with_non_list_requirements_raises) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.001s\n\nOK\n",
+  "executed_at": "2026-11-23T16:36:33.342909+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}

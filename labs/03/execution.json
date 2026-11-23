@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "cff69b88d5d76839319d3399942548a83a03e7b95a6d368476a2e5aad116185f",
+  "test_sha256": "7580f29e55e75aa806866593c65aa5985dbe5a6627fc14219f29a404fde16165",
+  "test_output_tail": "test_basic_similarity (test_lab.TestSemanticSkillRouter.test_basic_similarity) ... ok\ntest_domain_constraint (test_lab.TestSemanticSkillRouter.test_domain_constraint) ... ok\ntest_empty_inputs (test_lab.TestSemanticSkillRouter.test_empty_inputs) ... ok\ntest_invalid_types (test_lab.TestSemanticSkillRouter.test_invalid_types) ... ok\ntest_k_greater_than_skills (test_lab.TestSemanticSkillRouter.test_k_greater_than_skills) ... ok\ntest_k_zero_or_negative (test_lab.TestSemanticSkillRouter.test_k_zero_or_negative) ... ok\ntest_tie_breaking_stability (test_lab.TestSemanticSkillRouter.test_tie_breaking_stability) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n",
+  "executed_at": "2026-11-23T17:58:48.556033+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}

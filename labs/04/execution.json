@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "aeb7bbd3c4cd29e25a3676fcac696fb61c09084f65f9da5fdc46d3f108807c7f",
+  "test_sha256": "7f1733533f936b6a7755139572866b15915942401ba0cf89259a68d28d790012",
+  "test_output_tail": "test_load_selected_invalid_id (test_lab.TestProgressiveSkillLoading.test_load_selected_invalid_id) ... ok\ntest_load_selected_returns_full_skill (test_lab.TestProgressiveSkillLoading.test_load_selected_returns_full_skill) ... ok\ntest_metadata_does_not_leak_instructions (test_lab.TestProgressiveSkillLoading.test_metadata_does_not_leak_instructions) ... ok\ntest_metadata_no_instructions (test_lab.TestProgressiveSkillLoading.test_metadata_no_instructions) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.001s\n\nOK\n",
+  "executed_at": "2026-11-23T17:59:29.346010+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}
