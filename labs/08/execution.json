@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "1bd7bb7482b53133fe38697b75da6e0250fa7fed132b5f94ee67268028d73259",
+  "test_sha256": "bcb63b8c28deb5b399bb4f807e3a781676afa027fe8a8dae5b8c05f833497fcc",
+  "test_output_tail": "test_greet_tool (test_lab.TestMCPIntegrationLayer.test_greet_tool) ... ok\ntest_greet_tool_not_allowed (test_lab.TestMCPIntegrationLayer.test_greet_tool_not_allowed) ... ok\ntest_greet_tool_wrong_type (test_lab.TestMCPIntegrationLayer.test_greet_tool_wrong_type) ... ok\ntest_schema_extra_param (test_lab.TestMCPIntegrationLayer.test_schema_extra_param) ... ok\ntest_schema_mismatch_type (test_lab.TestMCPIntegrationLayer.test_schema_mismatch_type) ... ok\ntest_schema_missing_param (test_lab.TestMCPIntegrationLayer.test_schema_missing_param) ... ok\ntest_successful_add (test_lab.TestMCPIntegrationLayer.test_successful_add) ... ok\ntest_tool_not_allowed (test_lab.TestMCPIntegrationLayer.test_tool_not_allowed) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.000s\n\nOK\n",
+  "executed_at": "2026-11-23T18:06:12.652789+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}

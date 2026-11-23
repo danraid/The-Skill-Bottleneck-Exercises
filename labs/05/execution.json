@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "7863573f51542140850b42eda208057c6672c9a2c0c91742d7ed47c2d4bc198e",
+  "test_sha256": "a9bf7bbae03932d57bc3237582c147f5f385a78f1b7c835c085378664379f604",
+  "test_output_tail": "test_empty_input (test_lab.TestSkillConflictDetector.test_empty_input) ... ok\ntest_multiple_conflicts (test_lab.TestSkillConflictDetector.test_multiple_conflicts) ... ok\ntest_no_conflicts (test_lab.TestSkillConflictDetector.test_no_conflicts) ... ok\ntest_overlap_conflict (test_lab.TestSkillConflictDetector.test_overlap_conflict) ... ok\ntest_policy_conflict (test_lab.TestSkillConflictDetector.test_policy_conflict) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n",
+  "executed_at": "2026-11-23T18:00:28.135378+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}

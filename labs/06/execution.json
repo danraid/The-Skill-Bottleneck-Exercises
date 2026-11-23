@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "13b6cd71fd4dc979f05a101dd6b3d5be9b47c44f2ec5faf8fbc8e8a6e0de81cd",
+  "test_sha256": "ccf9b27b59c54a8b3493a71097b5de78fe41eed96d9fdfd82c5785e881595a20",
+  "test_output_tail": "test_empty_tools_allowed (test_lab.TestSubagentProfileFactory.test_empty_tools_allowed) ... ok\ntest_invalid_name_or_role (test_lab.TestSubagentProfileFactory.test_invalid_name_or_role) ... ok\ntest_isolation_between_instances (test_lab.TestSubagentProfileFactory.test_isolation_between_instances) ... ok\ntest_profile_is_immutable (test_lab.TestSubagentProfileFactory.test_profile_is_immutable) ... ok\ntest_tools_type_enforcement (test_lab.TestSubagentProfileFactory.test_tools_type_enforcement) ... ok\ntest_unauthorized_tool_denied (test_lab.TestSubagentProfileFactory.test_unauthorized_tool_denied) ... ok\ntest_valid_profile_creation (test_lab.TestSubagentProfileFactory.test_valid_profile_creation) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n",
+  "executed_at": "2026-11-23T18:01:24.205135+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}

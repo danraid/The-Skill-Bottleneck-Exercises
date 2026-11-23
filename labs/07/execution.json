@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "e2b39921d289f05683e8ac077ddb0248e2adb9339b3cd8344b4351a107a59d34",
+  "test_sha256": "ade1a9d074c28955ba7460b9cee9402364f9c63c11748c2c94c88f778235f262",
+  "test_output_tail": "test_action_error_handling_and_bounded_retry (test_lab.TestPlaybookExecutionEngine.test_action_error_handling_and_bounded_retry) ... ok\ntest_cycle_detection (test_lab.TestPlaybookExecutionEngine.test_cycle_detection) ... ok\ntest_duplicate_step_id (test_lab.TestPlaybookExecutionEngine.test_duplicate_step_id) ... ok\ntest_step_with_retry_and_failure (test_lab.TestPlaybookExecutionEngine.test_step_with_retry_and_failure) ... ok\ntest_successful_playbook (test_lab.TestPlaybookExecutionEngine.test_successful_playbook) ... ok\ntest_unknown_action (test_lab.TestPlaybookExecutionEngine.test_unknown_action) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.001s\n\nOK\n",
+  "executed_at": "2026-11-23T18:05:15.822662+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}
