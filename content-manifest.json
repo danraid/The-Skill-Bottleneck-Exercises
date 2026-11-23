@@ -1,0 +1,217 @@
+{
+  "book": "The Skill Bottleneck",
+  "author": "Daniel Raaid",
+  "chapters": [
+    {
+      "number": "01",
+      "title": "The Agent Capability Paradox",
+      "exercises": 5,
+      "questions": 6,
+      "labs": [
+        "01"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/01"
+    },
+    {
+      "number": "02",
+      "title": "Anatomy of an Agent Skill",
+      "exercises": 5,
+      "questions": 7,
+      "labs": [
+        "02"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/02"
+    },
+    {
+      "number": "03",
+      "title": "Cognitive and Contextual Bottlenecks",
+      "exercises": 5,
+      "questions": 5,
+      "labs": [
+        "03"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/03"
+    },
+    {
+      "number": "04",
+      "title": "Measuring Skill-Set Complexity",
+      "exercises": 5,
+      "questions": 5,
+      "labs": [
+        "12"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/04"
+    },
+    {
+      "number": "05",
+      "title": "Designing Large-Scale Skill Registries",
+      "exercises": 5,
+      "questions": 5,
+      "labs": [
+        "02"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/05"
+    },
+    {
+      "number": "06",
+      "title": "Skill Retrieval and Progressive Disclosure",
+      "exercises": 5,
+      "questions": 7,
+      "labs": [
+        "03",
+        "04"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/06"
+    },
+    {
+      "number": "07",
+      "title": "Context Budgeting and Skill Interference",
+      "exercises": 5,
+      "questions": 6,
+      "labs": [
+        "04",
+        "05"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/07"
+    },
+    {
+      "number": "08",
+      "title": "From Monolithic Agents to Specialised Subagents",
+      "exercises": 5,
+      "questions": 7,
+      "labs": [
+        "06"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/08"
+    },
+    {
+      "number": "09",
+      "title": "Engineering Reusable Agent Profiles",
+      "exercises": 5,
+      "questions": 7,
+      "labs": [
+        "06"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/09"
+    },
+    {
+      "number": "10",
+      "title": "Playbook-Driven Agent Execution",
+      "exercises": 7,
+      "questions": 8,
+      "labs": [
+        "07"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/10"
+    },
+    {
+      "number": "11",
+      "title": "Orchestration, Delegation, and Coordination",
+      "exercises": 5,
+      "questions": 8,
+      "labs": [
+        "09"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/11"
+    },
+    {
+      "number": "12",
+      "title": "Model Context Protocol and Tool Boundaries",
+      "exercises": 10,
+      "questions": 7,
+      "labs": [
+        "08"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/12"
+    },
+    {
+      "number": "13",
+      "title": "Agent Memory and State Isolation",
+      "exercises": 7,
+      "questions": 10,
+      "labs": [
+        "10"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/13"
+    },
+    {
+      "number": "14",
+      "title": "Enterprise Agent Platforms",
+      "exercises": 7,
+      "questions": 10,
+      "labs": [
+        "14"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/14"
+    },
+    {
+      "number": "15",
+      "title": "Building a Skill Scalability Benchmark",
+      "exercises": 5,
+      "questions": 6,
+      "labs": [
+        "11",
+        "12"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/15"
+    },
+    {
+      "number": "16",
+      "title": "Experimental Design and Architectural Ablations",
+      "exercises": 7,
+      "questions": 7,
+      "labs": [
+        "11",
+        "12"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/16"
+    },
+    {
+      "number": "17",
+      "title": "Quality, Cost, Latency, and Reliability Trade-offs",
+      "exercises": 5,
+      "questions": 7,
+      "labs": [
+        "13"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/17"
+    },
+    {
+      "number": "18",
+      "title": "Reference Architecture: A Skill-Native Agent Platform",
+      "exercises": 5,
+      "questions": 5,
+      "labs": [
+        "14"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/18"
+    },
+    {
+      "number": "19",
+      "title": "Production Operations and Continuous Evaluation",
+      "exercises": 5,
+      "questions": 7,
+      "labs": [
+        "13",
+        "14"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/19"
+    },
+    {
+      "number": "20",
+      "title": "Adaptive Agent Systems and Open Research Problems",
+      "exercises": 5,
+      "questions": 5,
+      "labs": [
+        "09",
+        "14"
+      ],
+      "url": "https://github.com/danraid/The-Skill-Bottleneck-Exercises/tree/main/chapters/20"
+    }
+  ],
+  "lab_count": 14,
+  "total_exercises": 113,
+  "total_review_questions": 135,
+  "source_visibility": "private; exercise-only extraction",
+  "status": "COMPANION_MATERIALS_READY_FOR_TESTING"
+}
