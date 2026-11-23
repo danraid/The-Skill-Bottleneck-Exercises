@@ -1,0 +1,72 @@
+name: Build and validate textbook companion
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/build_companion.py
+      - .github/workflows/build-companion.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: textbook-companion-generation
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch canonical book and all recorded laboratory tests
+        run: git clone --quiet --depth 1 https://github.com/danraid/The-Skill-Bottleneck.git _book
+      - name: Generate chapter exercise and solution material
+        run: python scripts/build_companion.py
+      - name: Execute all 14 independently copied reference labs
+        run: |
+          python - <<'PY'
+          import subprocess
+          from pathlib import Path
+          for n in range(1,15):
+            path=Path('labs')/f'{n:02d}'
+            print('RUN_LAB',n,flush=True)
+            subprocess.run(['python','-m','unittest','-v','test_lab.py'],cwd=path,check=True)
+          PY
+      - name: Validate chapter URL targets and answer coverage
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('content-manifest.json').read_text())
+          assert len(d['chapters'])==20 and d['labs']==14
+          for chapter in d['chapters']:
+            n=chapter['chapter']
+            p=Path('chapters')/n
+            assert all((p/f).is_file() for f in ('README.md','exercises.md','answers.md'))
+            assert chapter['exercises']>=1
+            for lab in chapter['labs']:
+              assert (Path('labs')/lab/'README.md').exists()
+            assert 'Worked Answers' in (p/'answers.md').read_text()
+          assert d['exercises']>=50
+          print('LINK_TARGETS_AND_EXERCISES_OK',d['exercises'],d['review_questions'])
+          PY
+      - name: Persist validated public companion material
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md RUNNING.md EDITORIAL_NOTES.md content-manifest.json chapters labs
+          if ! git diff --cached --quiet; then
+            git commit -m 'education: publish 20 exercise/answer chapters and 14 tested labs'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: textbook-companion-verification
+          path: content-manifest.json
+          retention-days: 45
