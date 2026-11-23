@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "6621cff963a2989b822031deb399e7b966ff0785beb58cc006264eccb5b7dc18",
+  "test_sha256": "8d541325ff878daa1f49ef43555fdc381c67fc8e97fc17d3e315c68667a1a8d2",
+  "test_output_tail": "test_cross_tenant_agent_access_denied (test_lab.TestContextStore.test_cross_tenant_agent_access_denied) ... ok\ntest_delete_and_clear (test_lab.TestContextStore.test_delete_and_clear) ... ok\ntest_invalid_inputs (test_lab.TestContextStore.test_invalid_inputs) ... ok\ntest_isolation_between_agents (test_lab.TestContextStore.test_isolation_between_agents) ... ok\ntest_isolation_between_tenants (test_lab.TestContextStore.test_isolation_between_tenants) ... ok\ntest_list_keys_and_clear_tenant (test_lab.TestContextStore.test_list_keys_and_clear_tenant) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.001s\n\nOK\n",
+  "executed_at": "2026-11-23T18:08:03.283517+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}

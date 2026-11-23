@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "4e799a70f275c598461b7236ffdac7590c2900fd8589988ef7a1519033783895",
+  "test_sha256": "2524317b06ee33c30ee01dc227d69a055bed0d6ac5f39685d2c9f2a6571d1147",
+  "test_output_tail": "test_cyclic_delegation_detected (test_lab.TestHierarchicalOrchestrator.test_cyclic_delegation_detected) ... ok\ntest_invalid_handler (test_lab.TestHierarchicalOrchestrator.test_invalid_handler) ... ok\ntest_invalid_profiles_type (test_lab.TestHierarchicalOrchestrator.test_invalid_profiles_type) ... ok\ntest_invalid_task_type (test_lab.TestHierarchicalOrchestrator.test_invalid_task_type) ... ok\ntest_missing_domain (test_lab.TestHierarchicalOrchestrator.test_missing_domain) ... ok\ntest_missing_task_keys (test_lab.TestHierarchicalOrchestrator.test_missing_task_keys) ... ok\ntest_no_delegation (test_lab.TestHierarchicalOrchestrator.test_no_delegation) ... ok\ntest_permission_denied_on_delegation (test_lab.TestHierarchicalOrchestrator.test_permission_denied_on_delegation) ... ok\ntest_simple_delegation (test_lab.TestHierarchicalOrchestrator.test_simple_delegation) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.001s\n\nOK\n",
+  "executed_at": "2026-11-23T18:07:14.197063+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}

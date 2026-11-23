@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "9c3fd18f149994cc5ab2a3ecf25e6b5714afc6955c8154d1801251785614bde9",
+  "test_sha256": "97f473425524abcbbff4f90df73411622ee664e72da0c7158cf4feec5a81d833",
+  "test_output_tail": "test_basic_metrics (test_lab.TestAgentEvaluationFramework.test_basic_metrics) ... ok\ntest_empty_sets (test_lab.TestAgentEvaluationFramework.test_empty_sets) ... ok\ntest_missing_keys (test_lab.TestAgentEvaluationFramework.test_missing_keys) ... ok\ntest_out_of_bounds_indices (test_lab.TestAgentEvaluationFramework.test_out_of_bounds_indices) ... ok\ntest_overlap_denied (test_lab.TestAgentEvaluationFramework.test_overlap_denied) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nOK\n",
+  "executed_at": "2026-11-23T18:08:51.253320+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}

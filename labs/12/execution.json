@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "source_sha256": "855ba37c4925c6b51359dd22ed526cac4cbc0bd5c672e5f91db7864504ccfcee",
+  "test_sha256": "54bffc1b87a978061b17be9a552a7e6c4f92e31e1ef1c9bbba2aca5f5f55c732",
+  "test_output_tail": "test_adapter_exception_handling (test_lab.TestSkillScalabilityBenchmark.test_adapter_exception_handling) ... ok\ntest_empty_tasks_and_adapters (test_lab.TestSkillScalabilityBenchmark.test_empty_tasks_and_adapters) ... ok\ntest_missing_task_in_registry (test_lab.TestSkillScalabilityBenchmark.test_missing_task_in_registry) ... ok\ntest_proxy_and_real_results (test_lab.TestSkillScalabilityBenchmark.test_proxy_and_real_results) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.001s\n\nOK\n",
+  "executed_at": "2026-11-23T18:09:41.176213+00:00",
+  "isolation": "docker --network none --read-only --cap-drop ALL"
+}
